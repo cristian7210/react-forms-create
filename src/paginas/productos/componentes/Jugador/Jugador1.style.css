@@ -1,0 +1,17 @@
+.pr-container {
+    
+    text-align: left;
+    margin-bottom: 2px;
+    width: 100%;
+}
+
+.rt-container {
+    
+    text-align: center;
+    width: 100%;
+}
+
+.pr-stock{
+    color :red;
+    font-weight: bold;
+}

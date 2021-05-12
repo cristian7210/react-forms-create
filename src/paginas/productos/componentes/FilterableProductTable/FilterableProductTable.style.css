@@ -1,0 +1,51 @@
+.fpt-container {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    
+    float:left;
+
+}
+
+.Jugador{
+    width: 50%;
+    height: 70%;
+    
+    float:left;
+    margin: 0 auto;
+}
+.Equipo{
+    width: 45%;
+    height: 70%;
+    
+    float:right;
+    margin: 0 auto;
+}
+
+.formulario1{
+    width: 80%;
+    height: 20%;
+   
+    background: green;
+    float:left;
+    
+}
+
+.table{
+    
+    color: crimson;
+    font-weight: bold;
+
+}
+
+
+.table1{
+    background: yellow;
+    font-weight: bold;
+
+}
+.table2{
+    background:tomato;
+    font-weight: bold;
+
+}
