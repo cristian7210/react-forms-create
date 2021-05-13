@@ -62,7 +62,7 @@ const InscripcionEquipo = (props) => {
                   <tr>
                     <td>
                       <input 
-                      type="text" 
+                      type="number" 
                       value={idEquipo}
                       onChange={(event)=>{
                         setidEquipo(event.target.value);

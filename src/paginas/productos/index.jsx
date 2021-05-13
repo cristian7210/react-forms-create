@@ -97,22 +97,21 @@ const Productopagba = () => {
       <>  
       <FilterableProductTable 
         Liga={Inscripciones}
-            onAddJugador={(newjugadorObj,equipoId,ced) => {
+           
+            onAddJugador={(newjugadorObj,equipoId,ced,edad) => {
               
               const newLiga=[];
-
+              if(edad <= 0 || equipoId > Inscripciones.length || equipoId <= 0 ){
+                  alert('la edad no puede ser negativa o el equipo no se encuentra');
+              }else{
               for(let i=0;i<Inscripciones.length;i++){
                 
                            if (equipoId !== Inscripciones[i].id) {
-                                 newLiga.push(Inscripciones[i]);
+                                newLiga.push(Inscripciones[i]);
                                  
-                                 if(i == Inscripciones.length-1){
-                                  alert('ESTE EQUIPO NO SE ENCUENTRA');
-                                  }
                                 
                            } else {
-                           
-                            console.log(ced);
+                          
                                 newLiga.push({
                                   ...Inscripciones[i],
                                   jugador:[...Inscripciones[i].jugador,newjugadorObj]
@@ -121,30 +120,32 @@ const Productopagba = () => {
                            }     
                }
                setInscripciones(newLiga);
-             }}
+             }}}
 
+         
+         
             onAddEquipo={(newEquipoObj,equipoId)=>{
-              const newLiga=[];
+            const newLiga=[];
 
-              for(let i=0;i<Inscripciones.length;i++){
-                if (equipoId !== Inscripciones[i].id) {
-                     newLiga.push(Inscripciones[i]);
-                     
-                } else {
-                    newLiga.push({
-                      ...Inscripciones[i],
-                      Liga:[...Inscripciones[i],newEquipoObj]
-                  });
-                  
+            for(let i=0;i<Inscripciones.length;i++){
+               
+              if (equipoId === Inscripciones[i].id ) {
+
                 
-                }  
-                setInscripciones(newLiga);  
+                newLiga.push(Inscripciones[i]);
+
+              } else {
+                 
+                  newLiga.push(Inscripciones[i],newEquipoObj);
+                  
               }
+            }
+            setInscripciones(newLiga);  
+          }
+        }
               
-                    
-              
-            }}
-      />
+            
+          />
       
       </>
       

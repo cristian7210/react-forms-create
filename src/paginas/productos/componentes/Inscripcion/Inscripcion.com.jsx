@@ -25,7 +25,7 @@ const Inscripcion = (props) => {
       
     };
     
-    props.onAddJugador(newjugador,idequipo,cedula);
+    props.onAddJugador(newjugador,idequipo,cedula,edad);
      
   }
 
